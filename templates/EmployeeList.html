@@ -1,0 +1,13 @@
+<ul ng-repeat="employee in employees">
+  <li>
+    {{ employee.name | uppercase }}
+    <ul>
+      <li>{{ employee.gender | genderFilter }}</li>
+      <li>{{ employee.doj | date: "dd/MMM/yyyy" }}</li>
+      <li>{{ employee.city }}</li>
+      <li>{{ employee.salary | currency: "$" }}</li>
+    </ul>
+  </li>
+</ul>
+
+hello

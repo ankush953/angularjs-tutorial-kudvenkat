@@ -1,0 +1,16 @@
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+button{
+    height: 50px;
+    /* width: 100px; */
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(32, 212, 77);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="website">
+  <head>
+    <base href="/">
+    <title>Angular JS</title>
+    <script src="./js/angular.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/angular-route.min.js"></script>
+    <script src="./js/controller/WebsiteController.js"></script>
+    <link href="./css/button.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/Layout.css">
+  </head>
+  <body>
+    <div>
+      <div ng-class="'layout'">
+        <div id="header">
+          <h1>Website Header</h1>
+        </div>
+        <div id="links">
+          <h1>Website Links</h1>
+          <p>Go to...</p>
+          <div>
+            <a href="/home">Home</a>
+            <a href="/courses">Courses</a>
+            <a href="/students">Students</a>
+            <a href="/contact-us">Contact us</a>
+          </div>
+        </div>
+        <div id="content">
+          <ng-view></ng-view>
+        </div>
+        <div id="footer">
+          <h1>Website Footer</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

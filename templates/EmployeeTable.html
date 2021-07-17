@@ -1,0 +1,40 @@
+<table>
+    <thead>
+        <tr>
+            <th ng-click="setSortColumn('name')">
+                Name
+                <div ng-class="getArrowClass('name')"></div>
+            </th>
+            <th ng-click="setSortColumn('gender')">
+                Gender
+                <div ng-class="getArrowClass('gender')"></div>
+            </th>
+            <th ng-click="setSortColumn('doj')">
+                Joining Date
+                <div ng-class="getArrowClass('doj')"></div>
+            </th>
+            <th ng-click="setSortColumn('city')">
+                City
+                <div ng-class="getArrowClass('city')"></div>
+            </th>
+            <th ng-click="setSortColumn('salary')" ng-hide="hideSalary">
+                Salary
+                <div ng-class="getArrowClass('salary')"></div>
+            </th>
+            <th ng-click="setSortColumn('salary')" ng-show="hideSalary">
+                Salary
+                <div ng-class="getArrowClass('salary')"></div>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="employee in employees | filter: search | orderBy: sortColumn: reverseSort">
+            <td>{{ employee.name | uppercase }}</td>
+            <td>{{ employee.gender | genderFilter }}</td>
+            <td>{{ employee.doj | date: "dd/MMM/yyyy" }}</td>
+            <td>{{ employee.city }}</td>
+            <td ng-hide="hideSalary">{{ employee.salary | currency: "$" }}</td>
+
+        </tr>
+    </tbody>
+</table>
