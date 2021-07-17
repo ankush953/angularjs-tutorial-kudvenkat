@@ -1,3 +1,9 @@
-myApp.controller("demo-controller", function(){
-    this.message = "hello world";
+myApp.controller("country-controller", function(){
+    this.message = "India";
 })
+.controller("state-controller", function(){
+    this.message = "Uttar Pradesh";
+})
+.controller("city-controller", function(){
+    this.message = "Jaunpur";
+});
