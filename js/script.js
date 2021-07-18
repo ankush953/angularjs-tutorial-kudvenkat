@@ -3,6 +3,7 @@
 var myApp = angular
   .module("main-app", ["ngRoute"])
   .config(function ($routeProvider) {
+      $routeProvider.caseInsensitiveMatch = true;
       $routeProvider.when('/home',
       {
           templateUrl: "../templates/Home.html",
@@ -10,7 +11,7 @@ var myApp = angular
       })
       .when('/detail', {
           templateUrl: "../templates/Detail.html",
-          controller: "city-controller"
+          controller: "city-controller",
       })
       .when('/inline', {
           template: "<h1>You are viewing inline template</h1>",
