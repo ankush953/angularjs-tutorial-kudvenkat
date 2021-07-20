@@ -2,7 +2,7 @@
 
 var myApp = angular
   .module("main-app", ["ngRoute"])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
       $routeProvider.caseInsensitiveMatch = true;
       $routeProvider.when('/home',
       {
@@ -18,4 +18,6 @@ var myApp = angular
           controller: "state-controller"
       })
       .otherwise('/home');
+
+      $locationProvider.html5Mode(true);
   });
