@@ -1,6 +1,10 @@
-myApp.controller("country-controller", function($rootScope){
+myApp.controller("country-controller", function($scope){
     this.message = "India";
-    $rootScope.hello = "This is in rootscope";
+    $scope.$on("$locationChangeStart", function(event, next, current){
+        if(!confirm("do you want to go to " + next)){
+            event.preventDefault();
+        }
+    })
 })
 .controller("state-controller", function(){
     this.message = "Uttar Pradesh";
