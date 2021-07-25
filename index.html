@@ -6,6 +6,7 @@
     <script src="./js/angular.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/controller/MainController.js"></script>
+    <script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
     <script src="./js/angular-route.min.js"></script>
   </head>
   <body>
@@ -21,12 +22,12 @@
     </div>
 
     <div>
-      <a href="home">home</a>
-      <a href="detail">detail</a>
-      <a href="inline">inline</a>
+      <a ui-sref="home">home</a>
+      <a ui-sref="detail">detail</a>
+      <a ui-sref="inline">inline</a>
     </div>
     <div>
-      <ng-view></ng-view>
+      <ui-view></ui-view>
     </div>
   </body>
 </html>
