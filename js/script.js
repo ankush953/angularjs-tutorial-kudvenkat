@@ -2,7 +2,7 @@
 
 var myApp = angular
   .module("main-app", ["ui.router", "ngRoute"])
-  .config(function ($stateProvider, $locationProvider) {
+  .config(function ($stateProvider) {
     $stateProvider.caseInsensitiveMatch = true;
     $stateProvider
       .state("home", {
@@ -25,6 +25,4 @@ var myApp = angular
         templateUrl: "../templates/Student.html",
         controller: "student-controller",
       });
-
-    //   $locationProvider.html5Mode(true);
   });

@@ -23,6 +23,6 @@ myApp.controller("country-controller", function(){
         }
     ]
 })
-.controller("student-controller", function($scope, $transition$){
-    $scope.name = $transition$.params().studentName;
+.controller("student-controller", function($scope, $stateParams){
+    $scope.name = $stateParams.studentName;
 });
