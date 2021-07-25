@@ -14,7 +14,8 @@
       <div ng-controller="state-controller as stateCtrl">
         {{ countryCtrl.message }} - {{ stateCtrl.message }}
         <div ng-controller="city-controller as cityCtrl">
-          {{ countryCtrl.message }} - {{ stateCtrl.message }} - {{ cityCtrl.message }}
+          {{ countryCtrl.message }} - {{ stateCtrl.message }} - {{
+          cityCtrl.message }}
         </div>
       </div>
     </div>
@@ -24,8 +25,8 @@
       <a href="detail">detail</a>
       <a href="inline">inline</a>
     </div>
-    <div ng-view>
+    <div>
+      <ng-view></ng-view>
     </div>
-
   </body>
 </html>
