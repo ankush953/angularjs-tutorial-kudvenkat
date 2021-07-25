@@ -4,7 +4,7 @@
   <input placeholder="Enter Name to search" ng-model="searchValue.name">
   <ul ng-repeat="student in students | filter: searchValue.name">
     <li>
-      <a ui-sref="student({ studentName: student.name })">{{ student.name }}</a>
+      <a ui-sref="student({ studentName: student.name })" ui-sref-active="activeLink">{{ student.name }}</a>
       <ul>
         <li>{{ student.place }}</li>
       </ul>

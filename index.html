@@ -8,6 +8,7 @@
     <script src="./js/controller/MainController.js"></script>
     <script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
     <script src="./js/angular-route.min.js"></script>
+    <link rel="stylesheet" href="./css/Layout.css">
   </head>
   <body>
     <div ng-controller="country-controller as countryCtrl">
@@ -22,9 +23,9 @@
     </div>
 
     <div>
-      <a ui-sref="home">home</a>
-      <a ui-sref="detail">detail</a>
-      <a ui-sref="inline">inline</a>
+      <a ui-sref="home" ui-sref-active="activeLink">home</a>
+      <a ui-sref="detail" ui-sref-active="activeLink">detail</a>
+      <a ui-sref="inline" ui-sref-active="activeLink">inline</a>
     </div>
     <div>
       <ui-view></ui-view>
