@@ -7,7 +7,7 @@ myApp.controller("country-controller", function(){
 .controller("city-controller", function(){
     this.message = "Jaunpur";
 })
-.controller("detail-controller", function($scope, $log){
+.controller("detail-controller", function($scope){
     $scope.students = [
         {
             name: "ankush",
@@ -22,5 +22,7 @@ myApp.controller("country-controller", function(){
             place: "jaunpur"
         }
     ]
-    $log.info($scope.students);
+})
+.controller("student-controller", function($scope, $routeParams, $log){
+    $scope.name = $routeParams.studentName;
 });
