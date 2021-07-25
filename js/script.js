@@ -18,7 +18,8 @@ var myApp = angular
           controller: "state-controller"
       })
       .when('/student/:studentName', {
-          template: '<h1>In student detail page</h1>',
+          templateUrl: '../templates/Student.html',
+          controller: "student-controller"
       })
       .otherwise('/home');
 
