@@ -1,6 +1,8 @@
 <div ng-controller="detail-controller">
   Detail Page
-  <ul ng-repeat="student in students">
+  <br>
+  <input placeholder="Enter Name to search" ng-model="searchValue.name">
+  <ul ng-repeat="student in students | filter: searchValue.name">
     <li>
       <a href="student/{{ student.name }}">{{ student.name }}</a>
       <ul>
