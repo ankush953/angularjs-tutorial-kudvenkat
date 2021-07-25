@@ -17,6 +17,9 @@ var myApp = angular
           template: "<h1>You are viewing inline template</h1>",
           controller: "state-controller"
       })
+      .when('/student/:studentName', {
+          template: '<h1>In student detail page</h1>',
+      })
       .otherwise('/home');
 
       $locationProvider.html5Mode(true);
