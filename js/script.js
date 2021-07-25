@@ -2,7 +2,11 @@
 
 var myApp = angular
   .module("main-app", ["ui.router", "ngRoute"])
-  .config(function ($stateProvider, $urlMatcherFactoryProvider, $urlRouterProvider) {
+  .config(function (
+    $stateProvider,
+    $urlMatcherFactoryProvider,
+    $urlRouterProvider
+  ) {
     $urlMatcherFactoryProvider.caseInsensitive(true);
     $urlRouterProvider.otherwise("/detail");
     $stateProvider
@@ -21,9 +25,20 @@ var myApp = angular
         template: "<h1>You are viewing inline template</h1>",
         controller: "state-controller",
       })
-      .state("student", {
-        url: "/student/{studentName}",
-        templateUrl: "../templates/Student.html",
-        controller: "student-controller",
+      .state("students", {
+        url: "/students",
+        templateUrl: "../templates/Students.html",
+        controller: "students-controller",
+        abstract: true,
+      })
+      .state("students.student-detail", {
+        url: "/{studentName}",
+        templateUrl: "../templates/Student-Detail.html",
+        controller: "student-detail-controller",
+      })
+      .state("students.student-list", {
+        url: "/list",
+        templateUrl: "../templates/Student-List.html",
+        controller: "student-list-controller",
       });
   });
