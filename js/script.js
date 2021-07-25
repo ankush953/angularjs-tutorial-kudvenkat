@@ -1,27 +1,30 @@
 /// <reference path="angular.min.js">
 
 var myApp = angular
-  .module("main-app", ["ngRoute"])
-  .config(function ($routeProvider, $locationProvider) {
-      $routeProvider.caseInsensitiveMatch = true;
-      $routeProvider.when('/home',
-      {
-          templateUrl: "../templates/Home.html",
-          controller: "country-controller",
+  .module("main-app", ["ui.router", "ngRoute"])
+  .config(function ($stateProvider, $locationProvider) {
+    $stateProvider.caseInsensitiveMatch = true;
+    $stateProvider
+      .state("home", {
+        url: "/home",
+        templateUrl: "../templates/Home.html",
+        controller: "country-controller",
       })
-      .when('/detail', {
-          templateUrl: "../templates/Detail.html",
-          controller: "city-controller",
+      .state("detail", {
+        url: "/detail",
+        templateUrl: "../templates/Detail.html",
+        controller: "city-controller",
       })
-      .when('/inline', {
-          template: "<h1>You are viewing inline template</h1>",
-          controller: "state-controller"
+      .state("inline", {
+        url: "/inline",
+        template: "<h1>You are viewing inline template</h1>",
+        controller: "state-controller",
       })
-      .when('/student/:studentName', {
-          templateUrl: '../templates/Student.html',
-          controller: "student-controller"
-      })
-      .otherwise('/home');
+      .state("student", {
+        url: "/student/{studentName}",
+        templateUrl: "../templates/Student.html",
+        controller: "student-controller",
+      });
 
-      $locationProvider.html5Mode(true);
+    //   $locationProvider.html5Mode(true);
   });
