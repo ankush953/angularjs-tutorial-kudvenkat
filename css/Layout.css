@@ -40,3 +40,9 @@ h1{
     text-align: center;
     color: rgb(206, 179, 146);
 }
+
+
+.activeLink{
+    color: rgb(201, 198, 57);
+    font-size: larger;
+}
