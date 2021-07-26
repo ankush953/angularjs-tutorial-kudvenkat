@@ -2,8 +2,8 @@
 
 var myApp = angular
   .module("main-app", ["ui.router", "ngRoute"])
-  .config(function ($stateProvider) {
-    $stateProvider.caseInsensitiveMatch = true;
+  .config(function ($stateProvider, $urlMatcherFactoryProvider) {
+    $urlMatcherFactoryProvider.caseInsensitive(true);
     $stateProvider
       .state("home", {
         url: "/home",
