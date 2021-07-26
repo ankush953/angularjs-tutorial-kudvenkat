@@ -11,21 +11,11 @@
     <link rel="stylesheet" href="./css/Layout.css">
   </head>
   <body>
-    <div ng-controller="country-controller as countryCtrl">
-      {{ countryCtrl.message }}
-      <div ng-controller="state-controller as stateCtrl">
-        {{ countryCtrl.message }} - {{ stateCtrl.message }}
-        <div ng-controller="city-controller as cityCtrl">
-          {{ countryCtrl.message }} - {{ stateCtrl.message }} - {{
-          cityCtrl.message }}
-        </div>
-      </div>
-    </div>
-
     <div>
-      <a ui-sref="home" ui-sref-active="activeLink">home</a>
-      <a ui-sref="detail" ui-sref-active="activeLink">detail</a>
-      <a ui-sref="inline" ui-sref-active="activeLink">inline</a>
+      <a ui-sref="home" ui-sref-active="activeLink">Home</a>
+      <a ui-sref="detail" ui-sref-active="activeLink">Detail</a>
+      <a ui-sref="students.student-list" ui-sref-active="activeLink">Students Portal</a>
+      <a ui-sref="inline" ui-sref-active="activeLink">Inline Demo</a>
     </div>
     <div>
       <ui-view></ui-view>

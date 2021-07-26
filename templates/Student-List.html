@@ -1,0 +1,17 @@
+<div ng-controller='students-controller'>
+    Hello love...
+    <br>
+    Now, we are in end game.
+    So, there are only three students as you can see on the sceen.
+    <br>
+    <br>
+  <input placeholder="Enter Name to search" ng-model="searchValue.name">
+  <ul ng-repeat="student in students | filter: searchValue.name">
+    <li>
+      <a ui-sref="students.student-detail({ studentName: student.name })" ui-sref-active="activeLink">{{ student.name }}</a>
+      <ul>
+        <li>{{ student.place }}</li>
+      </ul>
+    </li>
+  </ul>
+</div>

@@ -8,6 +8,8 @@ myApp.controller("country-controller", function(){
     this.message = "Jaunpur";
 })
 .controller("detail-controller", function($scope){
+})
+.controller("students-controller", function($scope){
     $scope.students = [
         {
             name: "ankush",
@@ -23,6 +25,9 @@ myApp.controller("country-controller", function(){
         }
     ]
 })
-.controller("student-controller", function($scope, $stateParams){
+.controller("student-list-controller", function(){
+
+})
+.controller("student-detail-controller", function($scope, $stateParams){
     $scope.name = $stateParams.studentName;
 });
